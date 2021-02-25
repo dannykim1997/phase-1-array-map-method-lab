@@ -11,6 +11,21 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
-}
+// map() tutorials to iterate every element(each sentence)
+// split each element into individual words
+// map() that to be able to iterate all individual elements that are now individual words
+// capitalize the first letter of each element that are now words
+// join all elements (words) together in order to make back into sentences
+// sentences should now be correct (every first letter in each being capitalized)
+
+// function titleCased() {
+//   return tutorials.map(words => {const splitWords = words.split(" ");
+//   const firstLetter = splitWords.map(letter => letter[0].toUpperCase() + letter.slice(1) ).join(" ");
+//   return firstLetter
+// } )
+// }
+
+const titleCased = () => tutorials.map(words => {const splitWords = words.split(" ");
+  const firstLetter = splitWords.map(letter => letter[0].toUpperCase() + letter.slice(1) ).join(" ");
+  return firstLetter
+} )
